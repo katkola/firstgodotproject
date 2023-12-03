@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://db74ti5vq114r"]
+
+[ext_resource type="PackedScene" uid="uid://c3y7iy61ybkyy" path="res://Fwog.tscn" id="1_kkb8s"]
+[ext_resource type="Script" path="res://Main.gd" id="1_qgw16"]
+[ext_resource type="Texture2D" uid="uid://6uev86vmumax" path="res://Fwog.png" id="2_g7fv8"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3gu0p"]
+blend_mode = 2
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_qgw16")
+
+[node name="Fwog" parent="." instance=ExtResource("1_kkb8s")]
+visibility_layer = 2
+z_index = 1
+position = Vector2(623, 321)
+scale = Vector2(0.18, 0.18)
+
+[node name="BackgroundImage" type="TextureRect" parent="."]
+material = SubResource("CanvasItemMaterial_3gu0p")
+offset_left = -246.0
+offset_top = -228.0
+offset_right = 1365.0
+offset_bottom = 1008.0
+texture = ExtResource("2_g7fv8")
+expand_mode = 1

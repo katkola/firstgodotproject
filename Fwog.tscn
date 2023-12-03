@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3y7iy61ybkyy"]
+
+[ext_resource type="Texture2D" uid="uid://6uev86vmumax" path="res://Fwog.png" id="1_earh3"]
+[ext_resource type="Script" path="res://Fwog.gd" id="1_gc3m7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oxiuh"]
+
+[node name="Fwog" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_gc3m7")
+angular_speed = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(100, 100)
+shape = SubResource("RectangleShape2D_oxiuh")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_earh3")

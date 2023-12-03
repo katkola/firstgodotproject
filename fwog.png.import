@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6uev86vmumax"
-path="res://.godot/imported/fwog.png-cf9e6a3b497bcfd4a522073242e29ed8.ctex"
+path="res://.godot/imported/Fwog.png-81f8e939d2e280383106d069f059147d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fwog.png"
-dest_files=["res://.godot/imported/fwog.png-cf9e6a3b497bcfd4a522073242e29ed8.ctex"]
+source_file="res://Fwog.png"
+dest_files=["res://.godot/imported/Fwog.png-81f8e939d2e280383106d069f059147d.ctex"]
 
 [params]
 
