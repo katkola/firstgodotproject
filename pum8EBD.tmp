@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://ckoeolenidumy"]
 
+[ext_resource type="Script" path="res://Pumpkin.gd" id="1_5qn71"]
 [ext_resource type="Texture2D" uid="uid://cb66qquwph8ah" path="res://bright_pumpkin.png" id="1_07r78"]
-[ext_resource type="Script" path="res://pumpkin.gd" id="1_q8pyc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wruus"]
 
 [node name="Pumpkin" type="Node2D"]
+script = ExtResource("1_5qn71")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_q8pyc")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 texture = ExtResource("1_07r78")
@@ -16,3 +16,5 @@ texture = ExtResource("1_07r78")
 [node name="MeleeRange" type="CollisionShape2D" parent="CharacterBody2D"]
 scale = Vector2(20, 10)
 shape = SubResource("CapsuleShape2D_wruus")
+
+[connection signal="touch" from="." to="." method="_on_touch"]

@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://db74ti5vq114r"]
+[gd_scene load_steps=6 format=3 uid="uid://db74ti5vq114r"]
 
 [ext_resource type="PackedScene" uid="uid://c3y7iy61ybkyy" path="res://Fwog.tscn" id="1_kkb8s"]
 [ext_resource type="Script" path="res://Main.gd" id="1_qgw16"]
 [ext_resource type="Texture2D" uid="uid://6uev86vmumax" path="res://Fwog.png" id="2_g7fv8"]
+[ext_resource type="PackedScene" uid="uid://ckoeolenidumy" path="res://pumpkin.tscn" id="4_gk27p"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3gu0p"]
 blend_mode = 2
 
 [node name="Main" type="Node2D"]
+position = Vector2(1, 0)
 script = ExtResource("1_qgw16")
+pumpkin_scene = ExtResource("4_gk27p")
 
 [node name="Fwog" parent="." instance=ExtResource("1_kkb8s")]
 visibility_layer = 2
@@ -24,3 +27,13 @@ offset_right = 1365.0
 offset_bottom = 1008.0
 texture = ExtResource("2_g7fv8")
 expand_mode = 1
+
+[node name="Loot" type="Node" parent="."]
+
+[node name="Pumpkin" parent="Loot" instance=ExtResource("4_gk27p")]
+position = Vector2(1039, 142)
+scale = Vector2(0.5, 0.5)
+
+[node name="Pumpkin2" parent="Loot" instance=ExtResource("4_gk27p")]
+position = Vector2(330, 500)
+scale = Vector2(0.5, 0.5)
